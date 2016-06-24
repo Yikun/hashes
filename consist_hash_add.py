@@ -16,8 +16,7 @@ ring = []
 new_ring = []
 
 for n in range(NODES):
-    h = _hash(n)
-    ring.append(h)
+    ring.append(_hash(n))
     ring.sort()
 
 for n in range(NEW_NODES):

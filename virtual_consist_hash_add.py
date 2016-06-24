@@ -37,7 +37,7 @@ print len(ring2)
 
 change = 0
 for item in range(ITEMS):
-    h = hash(str(item))
+    h = _hash(str(item))
     n = bisect_left(ring, h) % (NODES*VNODES)
     n2 = bisect_left(ring2, h) % (NODES2*VNODES)
     if hash2node[ring[n]] != hash2node2[ring2[n2]]:
