@@ -27,8 +27,8 @@ change = 0
 
 for item in range(ITEMS):
     h = _hash(item)
-    n = bisect_left(ring, h) % NODES
-    new_n = bisect_left(new_ring, h) % NEW_NODES
+    n = ring[bisect_left(ring, h) % NODES]
+    new_n = new_ring[bisect_left(new_ring, h) % NEW_NODES]
     if new_n != n:
         change += 1
 
